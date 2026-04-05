@@ -1,7 +1,6 @@
-tensorflow-cpu
+tensorflow==2.18.0
 opencv-python-headless
 pillow
 matplotlib
 streamlit
 numpy
-keras
