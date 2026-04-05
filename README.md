@@ -47,3 +47,17 @@ IWMI-Project---Face-Mask-Detector-with-CNN/
 3. Detected face is cropped, resized to 128x128, and normalized
 4. Custom CNN classifies as `with_mask` or `without_mask`
 5. Result shown with confidence percentage and prediction bar chart
+
+## Model Analysis
+The model achieves 96% test accuracy on the held-out test set across both classes.
+
+**Where it succeeds:**
+- Clear frontal and slight side profile faces are classified correctly with high confidence
+- Improperly worn masks where the face is still visible are correctly identified as without_mask
+- Masks being removed or pulled down are correctly classified as without_mask
+- Shows the model has learned genuine mask features rather than just detecting mask-shaped objects
+
+**Where it fails:**
+- Novelty or printed masks with a face printed on them are misclassified as without_mask, since the model associates visible facial features with the unmasked class
+- Very low quality or heavily occluded images may reduce confidence
+- When Haar Cascade fails to detect a face, the entire image is classified instead of the face region, which can reduce accuracy
