@@ -31,15 +31,16 @@ Two classes:
 - `without_mask` — 3828 images
 
 ## Project Structure
+```
 IWMI-Project---Face-Mask-Detector-with-CNN/
-├── IWMI.ipynb                # Full training pipeline
-├── app.py                    # Streamlit web application
-├── best_model.h5             # Saved model weights
-├── Result/                   # Evaluation results
+├── IWMI.ipynb              # Full training pipeline
+├── app.py                  # Streamlit web application
+├── best_model.h5           # Saved model weights
+├── Result/
 │   ├── training_curves.png
-│   └── confusion_matrix.png    
+│   └── confusion_matrix.png
 └── README.md
-
+```
 ## How the app Works
 1. Upload a `.jpg`, `.jpeg`, or `.png` face image
 2. Haar Cascade detects the face location in the image
