@@ -5,7 +5,9 @@ from tensorflow import keras
 from PIL import Image
 import cv2
 
-model = keras.models.load_model('best_model.h5')
+
+import tensorflow as tf
+model = tf.keras.models.load_model('best_model.h5', compile=False)
 classes = ['with_mask', 'without_mask']
 
 st.set_page_config(page_title="Face Mask Detector", layout="centered")
